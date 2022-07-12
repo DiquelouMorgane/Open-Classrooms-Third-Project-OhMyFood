@@ -1,0 +1,12 @@
+@mixin shadow-blocs {
+    box-shadow: 10px 5px 5px #e2e2e2;
+}
+@mixin shadow-blocs-hover {
+    box-shadow: 5px 5px 10px #454545;
+}
+@mixin cards-effects {
+    filter: brightness(120%);
+}
+@mixin gradient-effect {
+    background: linear-gradient(to bottom, $colour-secondary, $colour-primary);
+}

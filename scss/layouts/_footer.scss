@@ -1,0 +1,45 @@
+footer
+{
+    display: flex;
+    flex-direction: column;
+    background-color: #313131;
+    max-width: 100%;
+    text-align: left;
+    padding-left: 1rem;
+    & h1 
+        {
+            font-family: 'Shrikhand';
+            font-size: 1.2rem;
+            font-weight: lighter;
+            color: white;
+            @media (min-width: 750px) {
+                font-size: 2rem;
+            }
+        }
+    & ul 
+        {
+            padding: 0%;
+            list-style-type: none;
+            justify-content: space-between;
+            margin: 1rem 0rem;
+            font-size: 1rem;
+            @media (min-width: 750px) {
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+    & li 
+        {
+            margin-bottom: 0.5rem;
+        }
+    & a 
+        {
+            text-decoration: none;
+            color: white;
+            & i 
+                {
+                    width: 1rem;
+                    margin-right: 0.5rem;
+                }
+        }
+}

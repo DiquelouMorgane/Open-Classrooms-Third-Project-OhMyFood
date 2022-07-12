@@ -1,0 +1,181 @@
+#restaurant-picture
+{
+    & img 
+    {
+        height: 15rem;
+        object-fit: cover;
+        width: 100%;
+        @media (min-width: 750px) {
+            height: 30rem;
+        }
+    }
+}
+#menu-section
+{
+    background-color: $background-color;
+    border-radius: 2rem 2rem 0 0;
+    margin-top: -3rem;
+    @media (min-width: 750px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    & #restaurant-name
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5rem 1rem;
+        @media (min-width: 750px) {
+            width: 20rem;
+        }
+        & h2 
+        {
+            font-family: 'Shrikhand';
+            font-weight: lighter;
+        }
+        & i 
+        {
+            font-size: 1.5rem
+        }
+    }
+    & .menu
+    {
+        & .menu-parts
+        {
+            @media (min-width: 750px) {
+                margin-bottom: 5rem;
+                border: 2px solid #9356DC;
+                border-radius: 5%;
+                padding: 1rem;
+            }
+            & h3 
+            {
+                font-weight: lighter;
+                text-align: left;
+                font-size: 1rem;
+                border-bottom: solid #99e2d0;
+                margin: 0;
+                padding-bottom: 1rem;
+                margin-left: 1rem;
+                height: 0.5rem;
+                width: 3rem;
+            }
+            & ul 
+            {
+                list-style-type: none;
+                padding: 0;
+                margin: 0.5rem;
+                & li 
+                {
+                    display: flex;
+                    background-color: white;
+                    border-radius: 15px;
+                    margin-bottom: 1.5rem;
+                    @include shadow-blocs;
+                    cursor: pointer;
+                    @media (min-width: 750px) {
+                        width: 40rem;
+                    }
+                    & a 
+                    {
+                        width: 100%;
+                        height: 4rem;
+                        display: flex;
+                        justify-content: space-between;
+                        margin: 0rem 0rem 0rem 1rem;
+                        & .content-menu
+                        {
+                            display: inline-block;
+                            flex-direction: column;
+                            text-align: left;
+                            padding: 0.5rem 0rem;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            @media (min-width: 750px) {
+                            }
+                            & h4 
+                            {
+                                margin: 0.3rem 0rem;
+                                font-size: 0.9rem;
+                            }
+                            & span 
+                            {
+                                font-size: 0.8rem;
+                            }
+                        }
+                        & .price 
+                        {
+                            display: flex;
+                            font-weight: bolder;
+                            font-size: 0.8rem;
+                            align-items: center;
+                            & span 
+                            {
+                                margin-right: 1rem;
+                            }
+                        }
+                    }
+                }
+                & li:hover  .validation-button
+                {
+                    animation: appear-valid-sign 800ms ease-in-out;
+                    display: block;
+                }
+                & li:hover .fa-check-circle:before
+                {
+                    animation: validation-sign 800ms ease-in-out;
+                }
+            }
+            .starters 
+            {
+                animation: appear-menu 1s 150ms;
+            }
+            .dishes 
+            {
+                animation: appear-menu 1s 350ms;
+            }
+            .desserts
+            {
+                animation: appear-menu 1s 550ms;
+            }
+        }
+        & #explore-button
+        {
+            width: 12rem;
+            margin-bottom: 3rem;
+            @media (min-width: 1900px) {
+                width: 30rem;
+            }
+        }
+    }
+}
+@keyframes appear-menu {
+    0% {
+        opacity: 0;
+        transform: translateY(-3rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+}
+@keyframes validation-sign {
+    from {
+        transform: rotate(0turn);
+    }
+    to {
+        transform: rotate(1turn);
+    }
+}
+@keyframes appear-valid-sign {
+    0% {
+        width: 0rem;
+        height: 4rem;
+    }
+    100% {
+        width: 5rem;
+        height: 4rem;
+    }
+}

@@ -1,0 +1,62 @@
+#explore-button
+{
+    border: 0 solid transparent;
+    background: $gradient-color;
+    border-radius: 30px;
+    color: white;
+    height: 3rem;
+    font-size: 1rem;
+    font-weight: bolder;
+    transform: scale(1);
+    transition: all 500ms;
+    @include shadow-blocs;
+    @media (min-width: 750px) {
+        font-size: 1.3rem;
+    }
+}
+#explore-button:hover
+{
+    cursor: pointer;
+    transform: scale(1.05);
+    background: $lighter-gradient;
+    @include shadow-blocs-hover;
+}
+.choice-button
+{
+    display: flex;
+    align-items: center;
+    border: 0 solid transparent;
+    border-radius: 30px;
+    padding: 0.5rem 1rem;
+    width: 16rem;
+    @include shadow-blocs;
+    margin: 1rem 0.5rem;
+    transition: 700ms;
+    @media (min-width: 750px) {
+        width: 35rem;
+        font-size: 2rem;
+    }
+}
+.choice-button:hover 
+{
+    cursor: pointer;
+    background: lighten($colour-primary, 32%);
+}
+.validation-button
+{
+    width: 5rem;
+    height: 4rem;
+    display: none;
+    & i 
+    {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background-color: $colour-tertiary;
+        font-size: 2rem;
+        border-radius: 0px 15px 15px 0px;
+    }
+}

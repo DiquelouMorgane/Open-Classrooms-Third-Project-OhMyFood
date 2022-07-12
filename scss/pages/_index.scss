@@ -1,0 +1,314 @@
+body
+{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0%;
+    height: auto;
+}
+#loading 
+{
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    padding-top: 10rem;
+    position: fixed;
+    z-index: 9999;
+    background-color: white;
+    animation: loader 3s;
+}
+.top-bun
+{
+    width: 13rem;
+    height: 5rem;
+    border: 5px solid #f6bd70;
+    border-radius: 5rem 5rem 1rem 1rem;
+    animation: bun-lettuce-coming 1.5s;
+}
+.tomato
+{
+    width: 9rem;
+    height: 1rem;
+    border: 2px solid #ff79da;
+    border-radius: 2rem;
+    animation: content-coming 1.5s;
+}
+.lettuce
+{
+    width: 12rem;
+    height: 0.8rem;
+    border: 2px solid #b6f06a;
+    border-radius: 2rem;
+    animation: bun-lettuce-coming 1.5s;
+}
+.steak
+{
+    width: 13rem;
+    height: 1.8rem;
+    border: 3px solid #9356dc;
+    border-radius: 3rem;
+    animation: content-coming 1.5s;
+}
+.bottom-bun
+{
+    width: 13rem;
+    height: 3rem;
+    border: 5px solid #f6bd70;
+    border-radius: 1rem 1rem 5rem 5rem;
+    animation: bun-lettuce-coming 1.5s;
+}
+@keyframes bun-lettuce-coming {
+    0% {
+        transform:translateX(-30rem);
+        margin: 1rem;
+    }
+    70% {
+        margin: 1rem;
+    }
+    100% {
+        transform: translateX(0rem);
+        margin: 0rem;
+    }
+}
+@keyframes content-coming {
+    from {
+        transform:translateX(30rem);
+    }
+    to {
+        transform:translateX(0rem);
+    }
+}
+@keyframes loader {
+    0% {
+        visibility: visible;
+        opacity: 1;
+        z-index: 9999;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        visibility: hidden;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+#location-research
+{
+    & #location
+    {
+        background-color: #e2e2e2;
+        color: #454545;
+        padding: 2rem;
+        box-shadow: inset 0px 10px 10px #cecece;
+        @media (min-width: 750px) {
+            font-size: 1.5rem;
+        }
+        & #location-content
+        {
+            margin-left: 1rem;
+            font-weight: bolder;
+        }
+    }
+}
+#explore-section
+{
+    display: flex;
+    flex-direction: column;
+    background-color: $background-color;
+    padding: 10% 10%;
+    @media (min-width: 750px) {
+        padding: 7% 10%;
+    }
+    & h2 
+    {
+        font-size: 1.3rem;
+        margin: 0;
+        @media (min-width: 750px) {
+            font-size: 2rem;
+        }
+    }
+    & span 
+    {
+        padding: 1rem 0rem;
+        font-size: 0.9rem;
+        color: #454545;
+        @media (min-width: 750px) {
+            margin: 1rem 0rem;
+            font-size: 1.5rem;
+        }
+    }
+}
+#choice-section
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & h2 
+    {
+        font-size: 1.3rem;
+        text-align: left;
+        padding-left: 1rem;
+        font-weight: bolder;
+        @media (min-width: 750px) {
+            font-size: 2rem;
+        }
+        @media (min-width: 1900px) {
+            padding-left: 2rem;
+        }
+    }
+    & ol 
+    {
+        list-style-type: none;
+        padding: 1rem;
+        margin: 0;
+        @media (min-width: 750px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+        & li 
+        {
+            margin-bottom: 1.5rem;
+            @media (min-width: 1900px) {
+                margin: 0rem 5rem;
+            }
+            & .choice-button:hover  i 
+            {
+                color: $colour-primary;
+            }
+            & .number 
+            {
+                color: white;
+                background-color: $colour-primary;
+                border: 0 solid transparent;
+                width: 1.8rem;
+                height: 1.5rem;
+                border-radius: 100px;
+                justify-content: center;
+                left: 1rem;
+                font-size: 1rem;
+                padding-top: 0.3rem;
+                margin-left: -2rem;
+            }
+            & i 
+            {
+                color: #454545;
+                padding: 1rem;
+            }
+            & .button-content 
+            {
+                font-size: 1rem;
+                font-weight: bolder;
+                @media (min-width: 750px) {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+}
+#restaurants-exemples
+{
+    background-color: $background-color;
+    padding: 2rem 1rem;
+    & h2 
+    {
+        font-size: 1.3rem;
+        text-align: left;
+        padding-left: 0.5rem;
+        font-weight: bolder;
+        margin: 0%;
+        @media (min-width: 750px) {
+            font-size: 2rem;
+        }
+        @media (min-width: 1900px) {
+            padding-left: 2rem;
+        }
+    }
+    & #restaurants-menus
+    {
+        display: flex;
+        flex-direction: column;
+        @media (min-width: 750px) {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+        & .cards-menus
+        {
+            width: auto;
+            height: auto;
+            background-color: white;
+            border-radius: 2rem;
+            cursor: pointer;
+            margin-top: 1.5rem;
+            text-decoration: none;
+            color: black;
+            @include shadow-blocs;
+            position: relative;
+            transition: 0.5s;
+            @media (min-width: 750px) {
+                width: 45%;
+            }
+            @media (min-width: 1900px) {
+                width: 35%;
+                margin: 2rem;
+            }
+            & img 
+            {
+                height: 10rem;
+                object-fit: cover;
+                width: 100%;
+                border-radius: 2rem 2rem 0 0;
+            }
+            & .new-sign 
+            {
+                background-color: #99e2d0;
+                border-radius: 5px;
+                color: #1f997c;
+                padding: 0.5rem;
+                right: 1rem;
+                top: 0.5rem;
+                position: absolute;
+            }
+            & .card-content
+            {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0rem 1rem 1rem 1rem;
+                & .card-text
+                {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: left;
+                    & h3 
+                    {
+                        margin: 0.5rem 0rem;
+                    }
+                }
+                & .fa-heart
+                {
+                    font-size: 1.5rem;
+                    transform: scale(1);
+                    -webkit-text-stroke: 2px black;
+                    color: white;
+                    transition: all 500ms;
+                } 
+                & .fa-heart:hover
+                {
+                    transform: scale(1.10);
+                    -webkit-text-stroke: 2px transparent;
+                    color: $colour-primary;
+                    transform-origin: 0% 50%;
+                }
+            }
+        }
+        & .cards-menus:hover
+        {
+            @include cards-effects;
+        }
+    }
+}
